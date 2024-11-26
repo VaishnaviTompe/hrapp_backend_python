@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+python-dotenv
+PyPDF2
+pandas
+langchain
+langchain-openai
+langchain-community
+chroma
+groq
+langchain-groq
+pydantic
+openai
