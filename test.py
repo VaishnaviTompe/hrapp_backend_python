@@ -448,5 +448,10 @@ async def submit_quiz(quiz_data: QuizData):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error saving quiz data: {str(e)}")
 
+# @app.get("/ok")
+# def read_root():
+#     return {"message": "Hello, World!"}
+
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    port = int(os.getenv("PORT", 8000))  # Default port is 8000 if PORT is not set in the environment
+    uvicorn.run(app, host="0.0.0.0", port=port)
